@@ -452,6 +452,13 @@ section {
     color: var(--text-light);
 }
 
+.resume-btn {
+    margin-top: 20px;
+    /* Add this specific rule to make the resume button small */
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -502,6 +509,7 @@ section {
     display: block;
     margin: 0 auto;
 }
+
 /* Skills Section */
 .skills-content {
     display: grid;
@@ -1109,8 +1117,13 @@ section {
     }
 
     .contact-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+    
+    .contact-form {
+      grid-column: 1 / -1;
     }
 
     .section-title {
