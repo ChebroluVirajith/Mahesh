@@ -172,10 +172,10 @@ function updateActiveNavLink() {
 function initTypewriter() {
     const typewriterElement = document.getElementById('typewriter');
     const texts = [
-        'Full Stack Developer',
-        'Software Engineer', 
-        'Problem Solver',
-        'Tech Enthusiast'
+        'Prod Compliance Specialist', 
+        'Program Manager',
+        'Team Lead',
+        'Manual Tester'
     ];
     
     let textIndex = 0;
@@ -290,30 +290,13 @@ function initCounters() {
 // Contact form handling
 function initContactForm() {
     const form = document.getElementById('contact-form');
-    const submitBtn = form.querySelector('.btn');
     
+    // The form is set up with a mailto: action.
+    // The JavaScript doesn't need to prevent the default behavior.
     form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Add loading state
-        submitBtn.classList.add('loading');
-        
-        // Simulate form submission
-        setTimeout(() => {
-            submitBtn.classList.remove('loading');
-            showNotification('Message sent successfully!', 'success');
-            form.reset();
-        }, 2000);
-    });
-
-    // Form validation
-    const inputs = form.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('blur', validateField);
-        input.addEventListener('input', clearErrors);
+        // This allows the mailto action to work. The user's email client will open.
     });
 }
-
 function validateField(e) {
     const field = e.target;
     const value = field.value.trim();
